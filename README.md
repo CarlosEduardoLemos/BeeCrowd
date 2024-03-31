@@ -24,11 +24,7 @@ Sua contribuição é valorizada e bem-vinda! Se você quiser sugerir melhorias 
 
 ## Projetos Disponíveis
 
-Atualmente, os seguintes projetos estão disponíveis neste repositório:
 
-- [Projeto 1](projeto1/): Breve descrição do projeto 1.
-- [Projeto 2](projeto2/): Breve descrição do projeto 2.
-- [Projeto 3](projeto3/): Breve descrição do projeto 3.
 
 ## Contato
 
