@@ -1,34 +1,42 @@
-# Dicionário para identificar os animais com base nas três características
-animais = {
-    "vertebrado": {
-        "ave": {
-            "carnivoro": "aguia",
-            "onivoro": "pomba"
+def identificar_animal(caracteristica1, caracteristica2, caracteristica3):
+    # Dicionário para identificar os animais com base nas três características
+    animais = {
+        "vertebrado": {
+            "ave": {
+                "carnivoro": "aguia",
+                "onivoro": "pomba"
+            },
+            "mamifero": {
+                "onivoro": "homem",
+                "herbivoro": "vaca"
+            }
         },
-        "mamifero": {
-            "onivoro": "homem",
-            "herbivoro": "vaca"
-        }
-    },
-    "invertebrado": {
-        "inseto": {
-            "hematofago": "pulga",
-            "herbivoro": "lagarta"
-        },
-        "anelideo": {
-            "hematofago": "sanguessuga",
-            "onivoro": "minhoca"
+        "invertebrado": {
+            "inseto": {
+                "hematofago": "pulga",
+                "herbivoro": "lagarta"
+            },
+            "anelideo": {
+                "hematofago": "sanguessuga",
+                "onivoro": "minhoca"
+            }
         }
     }
-}
 
-# Entrada de três palavras
-caracteristica1 = input()
-caracteristica2 = input()
-caracteristica3 = input()
+    # Localiza o animal correspondente
+    return animais[caracteristica1][caracteristica2][caracteristica3]
 
-# Localiza o animal correspondente
-resultado = animais[caracteristica1][caracteristica2][caracteristica3]
+def main():
+    # Entrada de três palavras
+    caracteristica1 = input("Digite a primeira característica: ")
+    caracteristica2 = input("Digite a segunda característica: ")
+    caracteristica3 = input("Digite a terceira característica: ")
 
-# Exibe o resultado
-print(resultado)
+    # Identifica o animal correspondente
+    resultado = identificar_animal(caracteristica1, caracteristica2, caracteristica3)
+
+    # Exibe o resultado
+    print(resultado)
+
+if __name__ == "__main__":
+    main()

@@ -1,19 +1,30 @@
-# Entrada: três valores inteiros
-valores = list(map(int, input().split()))
+def ler_valores():
+    # Lê três valores inteiros e retorna-os como uma lista
+    return list(map(int, input("Digite três valores inteiros separados por espaço: ").split()))
 
-# Cria uma cópia dos valores para preservar a ordem original
-valores_originais = valores[:]
+def exibir_valores(valores):
+    # Exibe os valores, um por linha
+    for valor in valores:
+        print(valor)
 
-# Ordena os valores em ordem crescente
-valores.sort()
+def main():
+    # Lê os valores de entrada
+    valores = ler_valores()
 
-# Exibe os valores em ordem crescente
-for valor in valores:
-    print(valor)
+    # Cria uma cópia dos valores para preservar a ordem original
+    valores_originais = valores[:]
 
-# Linha em branco
-print()
+    # Ordena os valores em ordem crescente
+    valores.sort()
 
-# Exibe os valores na sequência como foram lidos
-for valor in valores_originais:
-    print(valor)
+    # Exibe os valores em ordem crescente
+    exibir_valores(valores)
+
+    # Linha em branco
+    print()
+
+    # Exibe os valores na sequência como foram lidos
+    exibir_valores(valores_originais)
+
+if __name__ == "__main__":
+    main()
