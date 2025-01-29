@@ -1,8 +1,11 @@
-X = int(input())
+# Leitura do valor inteiro X
+valor_inicial = int(input("Digite um valor inteiro: "))
 
-if X % 2 == 0:
-    X += 1
+# Ajuste para o próximo número ímpar, se necessário
+if valor_inicial % 2 == 0:
+    valor_inicial += 1
 
-for i in range(6):
-    print(X)
-    X += 2
+# Loop para imprimir os próximos 6 números ímpares
+for _ in range(6):
+    print(valor_inicial)
+    valor_inicial += 2
